@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Screenshot Result - SnapWeb</title>
+  <style>
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0; padding: 20px;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .toolbar {
+      background: #ffffff; padding: 15px 30px; border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      margin-bottom: 20px; display: flex; gap: 15px; align-items: center;
+      position: sticky; top: 20px; z-index: 100;
+    }
+    .preview-container {
+      max-width: 95%; max-height: 80vh; overflow: auto; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid #ddd; background: white;
+      text-align: center;
+    }
+    .preview {
+      display: block; max-width: 100%; height: auto; margin: 0 auto;
+    }
+    button {
+      padding: 9px 16px; background: #2b70e4; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 14px;
+      transition: background 0.2s;
+    }
+    button:hover { background: #1a5ac3; }
+    select { padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; outline: none; }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <div style="font-weight: bold; margin-right: 15px; font-size: 16px;">Review Screenshot</div>
+    
+    <div class="resize-controls" style="display: flex; gap: 8px; align-items: center; border-right: 1px solid #ddd; padding-right: 15px;">
+      <label style="font-size: 13px;">W:</label>
+      <input type="number" id="resize-w" style="width: 65px; padding: 6px; border-radius: 4px; border: 1px solid #ccc;">
+      <label style="font-size: 13px;">H:</label>
+      <input type="number" id="resize-h" style="width: 65px; padding: 6px; border-radius: 4px; border: 1px solid #ccc;">
+      <button id="btn-resize" style="background: #6c757d; padding: 7px 12px;">Resize</button>
+      <button id="btn-reset" style="background: #e2e6ea; color: #333; padding: 7px 12px; margin-right: 5px;">Reset</button>
+    </div>
+
+    <select id="format">
+      <option value="png">PNG</option>
+      <option value="jpeg">JPEG</option>
+    </select>
+    <button id="btn-download">Download Image</button>
+    <button id="btn-copy">Copy to Clipboard</button>
+  </div>
+  
+  <div class="preview-container">
+    <img id="preview" class="preview" src="">
+  </div>
+  
+  <script src="result.js"></script>
+</body>
+</html>

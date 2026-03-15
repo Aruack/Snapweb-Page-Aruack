@@ -1,0 +1,82 @@
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  width: 250px;
+  margin: 0;
+  padding: 15px;
+  background-color: #ffffff;
+  color: #333333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #eeeeee;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+body.dark-mode h2 {
+  border-bottom-color: #333;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px;
+  background-color: #2b70e4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #1a5ac3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+body.dark-mode button {
+  background-color: #3a7df0;
+}
+
+body.dark-mode button:hover {
+  background-color: #2b70e4;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+body.dark-mode .options {
+  border-top-color: #333;
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
